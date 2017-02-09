@@ -17,7 +17,4 @@ data can be entered and subsequently submitted using the "Submit" button. The ap
 for the students already in the database as per the specifications of the assignment using Struts2 framework. For optimum experience, 
 make use of a general purpose browser for displaying the assignment.
 4. The backend database used for this assignment is my GMU Oracle account, specifications of which have been already embedded in the
-source files for connecting to my account automatically. Below are the details, if required:
-GMU Oracle account:
-User name: pkhedeka
-Password: eedroa
+source files for connecting to my account automatically.
