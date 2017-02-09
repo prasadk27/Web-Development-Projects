@@ -1,0 +1,15 @@
+-Make use of scriptlets for iterating over student ids received from database in jsp
+-Define servlet url in web.xml
+-Java Beans need to have getters and setters
+-Redefine city, state as text boxes
+-Create table named "Student" in DB
+-Set Date field to varchar in DB
+-Probable source of error in studId being integer and not varchar in DB, crosscheck in SimpleAcknowledegementJSP.jsp
+
+To-Dos:
+-Mean and SD error--done
+-Form getting submitted inspite of validation errors---partially done
+-Verify Winner Ack Form--done
+-Modal dialog box not having 'X' sign--not doing
+-Name/# in source code--done
+-War file, README, then submit, then email TA about submission--done

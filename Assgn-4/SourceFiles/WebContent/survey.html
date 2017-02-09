@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<!-- Name: Prasad Khedekar	G# - G00973357 -->
+<head>
+<meta charset="ISO-8859-1">
+<title>CS Department Survey</title>
+<link rel = "stylesheet" href = "./css/jquery-ui.css" type = "text/css"/>
+<style type = "text/css">
+	table, td {
+		border: 1px solid black;
+    	border-collapse: collapse;
+	}
+	td {padding: 10px}
+	h1 {
+			text-shadow: -4px 4px 6px;
+			color: blue
+		}
+	.special {font-weight: bold}
+	#logo {
+	 	position: fixed;
+	    bottom: 0px;
+	    right: 0px;
+	    z-index: 1;
+	    padding: 0px;
+	    margin: 0px;
+		 }
+	body {
+		background-color:#D3D3D3
+	}
+</style>
+<script src = "./scripts/jquery.js" type="text/javascript"></script>
+<script src = "./scripts/jquery-ui.js" type="text/javascript"></script>
+<script type="text/javascript" src = "./scripts/assgn-4_pk.js"></script>
+<script>
+$(function(){
+	$("#logo").tooltip();
+});
+</script>
+</head>
+<body>
+<h1>CS Department Survey Form</h1>
+<a href="https://www2.gmu.edu/">
+<img src="images/logo.svg" alt="logo" height="100" width="150" id="logo" title = "Please visit https://www.gmu.edu for more information."> 
+</a>
+<p><strong>Please provide feedback about your campus visit using the survey form below. Required fields are in bold.</strong></p>
+<form method = "post" action = "StudentMainController" autocomplete = "on">
+	<table>
+		<tbody>
+			<tr>
+				<td><span class = "special">Name</span><br />
+					<input id = "name" name = "name" type = "text" size = "25" maxlength = "30" autofocus required/>
+				</td>
+				<td><span class = "special">Street Address</span><br />
+					<input id = "addr" name = "addr" type = "text" size = "25" maxlength = "50" required/>
+				</td>
+				<td><span class = "special">City</span><br />
+					<input id = "city" name = "city" type = "text" size = "25"/>
+				</td>
+			</tr>
+			<tr>
+				<td><span class = "special">State</span><br />
+					<input id = "state" name = "state" type = "text" size = "25"/>
+				</td>
+				<td><span class = "special">Zip</span><br />
+					<input id = "zip" name = "zip" type = "number" size = "25" onblur = "validateZip(this.value)" required/><br />
+					<span id = "validzip"></span>
+				</td>
+				<td><span class = "special">Telephone number</span><br />
+					<input id = "telenumber" name = "telenumber" type = "tel"	placeholder = "(###) ###-####"
+					pattern = "\(\d{3}\) +\d{3}-\d{4}" required/>
+				</td>
+			</tr>
+			<tr>
+				<td><span class = "special">Email</span><br />
+					<input id = "email" name = "email" type = "email" placeholder = "name@domain.com" />
+				</td>
+				<td><span>URL</span><br />
+					<input id = "url" name = "url" type = "url"
+					placeholder = "http://www.domainname.com"/>
+				</td>
+				<td><span class = "special">Date of Survey</span><br />
+					<input id = "surveydate" name = "surveydate" type = "date" placeholder = "yyyy-mm-dd" required/>
+				</td>
+			</tr>
+			<tr>
+				<td><span class = "special">Things liked about Campus</span><br />
+					<label>Students<input name = "thingsliked" type = "checkbox"
+							value = "Students"/></label><br />
+					<label>Location<input name = "thingsliked" type = "checkbox"
+							value = "Location"/></label><br />
+					<label>Campus<input name = "thingsliked" type = "checkbox"
+							value = "Campus"/></label><br />
+					<label>Atmosphere<input name = "thingsliked" type = "checkbox"
+							value = "Atmosphere"/></label><br />
+					<label>Dorm Rooms<input name = "thingsliked" type = "checkbox"
+							value = "Dorm"/></label><br />
+					<label>Sports<input name = "thingsliked" type = "checkbox"
+							value = "Sports"/></label>
+				</td>
+				<td><span class = "special">Source of Interest in the University</span><br />
+					<label>Friends<input name = "interestsource" type = "radio"
+							value = "Friends"/></label><br />
+					<label>Television<input name = "interestsource" type = "radio"
+							value = "Television"/></label><br />
+					<label>Internet<input name = "interestsource" type = "radio"
+							value = "Internet"/></label><br />
+					<label>Other<input name = "interestsource" type = "radio"
+							value = "Other"/></label>
+				</td>
+				<td><span class = "special">High-School Graduation Date</span><br />
+					<label class = "special" for = "txtList">Month
+						<input type = "text" id = "txtList" name = "gradmonth"
+							placeholder = "Select a Month" list = "months" required/>
+					<datalist id = "months">
+						<option value = "January">
+						<option value = "February">
+						<option value = "March">
+						<option value = "April">
+						<option value = "May">
+						<option value = "June">
+						<option value = "July">
+						<option value = "August">
+						<option value = "September">
+						<option value = "October">
+						<option value = "November">
+						<option value = "December">
+					</datalist>
+					</label>
+					<label class = "special">Year
+						<input type = "number" id = "year" name = "gradyear" placeholder = "Input Year" required/>
+					</label>
+				</td>				
+			</tr>
+			<tr>
+				<td><span>Comments</span><br />
+					<textarea id = "comments" name = "comments"
+						rows = "5" cols = "30"></textarea>
+				</td>
+				<td><span>Would you recommend this school to other prospective students?</span><br />
+					<select id = "rating" name = "rating">
+						<option selected = "selected">Very Likely</option>
+						<option>Likely</option>
+						<option>Unlikely</option>				
+					</select>
+				</td>
+				<td><span class = "special">Data</span><br />
+					<input id = "data" name = "data" type = "text" size = "50" maxlength = "100"/>
+				</td>
+			</tr>
+			<tr>
+				<td><span class = "special">Student ID</span><br />
+					<input id = "studentid" name = "studentid" type = "text" size = "20"/>
+				</td>
+			</tr>				
+		</tbody>
+	</table>
+	<p>
+		<button id = "submit-button" type = "submit">Submit</button>
+		<button type = "reset">Reset</button>
+	</p>
+</form>
+<div id = "error-dialog" title = "Form Feedback" style = "display:none">
+</div>
+</body>
+</html>

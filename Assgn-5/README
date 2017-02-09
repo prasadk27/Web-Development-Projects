@@ -1,0 +1,23 @@
+Name: Prasad Khedekar	G# - G00973357
+
+README for Asssignment No. 5 (SWE642)
+
+The submitted zip package includes the following:
+1. SWE642_Assgn5.war
+2. Folder named "SourceFiles"
+3. README (this file)
+
+Notes for installation and execution:
+1. The "SWE642_Assgn5.war" file can be deployed on Tomcat Server v8.0 using Eclipse IDE. It can be done by "Import" option
+under "File" tab in Eclipse.
+2. Once imported, the assignment can be executed by simply right-clicking on the project name "SWE642_Assgn4" and selecting
+Run As->Run on Server option, assuming that Tomcat Server v8.0 has already been installed on Eclipse IDE.
+3. Once the assignment is deployed on the server, the very first page of "index.jsp" would automatically open, following which
+data can be entered and subsequently submitted using the "Submit" button. The appropriate JSP is displayed along with the hyperlinks
+for the students already in the database as per the specifications of the assignment using Struts2 framework. For optimum experience, 
+make use of a general purpose browser for displaying the assignment.
+4. The backend database used for this assignment is my GMU Oracle account, specifications of which have been already embedded in the
+source files for connecting to my account automatically. Below are the details, if required:
+GMU Oracle account:
+User name: pkhedeka
+Password: eedroa
