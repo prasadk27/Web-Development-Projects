@@ -1,0 +1,6 @@
+AuthType Basic
+AuthUserFile /home/u3/pkhedeka/public_html/testaccess/users
+AuthName "642 homeworks"
+require user swe642
+
+/usr/apache/bin/htpasswd -c users swe642
